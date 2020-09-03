@@ -43,15 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Access_Mod.cs" />
     <Compile Include="Calculator.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Constructor.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="Fields.cs" />
     <Compile Include="Introduction.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="Order.cs" />
+    <Compile Include="Persons.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Properities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

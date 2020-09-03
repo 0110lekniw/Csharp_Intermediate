@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace _02_Intr_Classes
 {
-
-    class Program
+    class Properities
     {
-        static void Main(string[] args)
+        public static void Action()
         {
-            Properities.Action();
+            var person = new Persons(new DateTime(1997, 9, 2));
+            Console.WriteLine(person.Age);
+
         }
     }
 }

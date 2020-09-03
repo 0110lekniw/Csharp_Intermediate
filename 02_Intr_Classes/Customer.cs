@@ -3,27 +3,25 @@
 namespace _02_Intr_Classes
 {
 
-  public class Customer
+    public class Customer
+    {
+        public int Id;
+        public string Name;
+        public readonly List<Order> Orders = new List<Order>();
+
+        public Customer(int id)
         {
-            public int Id;
-            public string Name;
-            public List<Order> Orders;
-
-            public Customer()
-            {
-                Orders = new List<Order>();
-            }
-
-            public Customer(int id)
-                : this()
-            {
-                this.Id = id;
-            }
-
-            public Customer(int id, string name)
-                : this(id)
-            {
-                this.Name = name;
-            }
+            this.Id = id;
         }
+
+        public Customer(int id, string name)
+            : this(id)
+        {
+            this.Name = name;
+        }
+
+        public void Promote()
+        {
+        }
+    }
 }

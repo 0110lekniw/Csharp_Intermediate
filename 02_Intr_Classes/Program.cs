@@ -11,7 +11,7 @@ namespace _02_Intr_Classes
     {
         static void Main(string[] args)
         {
-            Properities.Action();
+            CreatingPost.NewPost();
         }
     }
 }

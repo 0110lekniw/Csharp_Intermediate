@@ -45,13 +45,11 @@
   <ItemGroup>
     <Compile Include="Access_Mod.cs" />
     <Compile Include="Calculator.cs" />
-    <Compile Include="Class1.cs" />
-    <Compile Include="Constructor.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="Fields.cs" />
+    <Compile Include="Exercise_1.cs" />
+    <Compile Include="HttpCookie.cs" />
+    <Compile Include="Indexies.cs" />
     <Compile Include="Introduction.cs" />
     <Compile Include="Methods.cs" />
-    <Compile Include="Order.cs" />
     <Compile Include="Persons.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />

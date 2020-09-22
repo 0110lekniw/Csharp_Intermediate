@@ -4,26 +4,38 @@ namespace _05_Method_Overriding
 {
     public abstract class DbConnection
     {
-        public string ConnectionString { get; set; }
-        private readonly TimeSpan _timeout = TimeSpan.FromSeconds(30);
+
+        public readonly TimeSpan _timeout = TimeSpan.FromMilliseconds(new Random().Next(3000));
+        protected readonly string _connectionString;
         public DbConnection()
         {
-            ConnectionString = "Some Strings";
+            _connectionString = "Connection_Default";
         }
 
         public DbConnection(string connectionString)
             : this()
             
         {
-            if (connectionString == null)
+            if (string.IsNullOrWhiteSpace(connectionString))
                 throw new ArgumentException("Wrong value of the Connection String");
-            else if (ConnectionString.Length == 0)
-                throw new ArgumentException("Connection String cannot be empty");
-            ConnectionString = connectionString;
+            _connectionString = connectionString;
         }
 
         public abstract void OpenConnection();
         public abstract void CloseConnection();
+        public void UseConnection()
+        {
+            var timer = System.Diagnostics.Stopwatch.StartNew();
 
+            OpenConnection();
+
+            timer.Stop();
+
+            var elapsedTime = timer.Elapsed;
+
+            if (elapsedTime > _timeout)
+                throw new ArgumentException("Time Overlapsed");
+            Console.WriteLine("Connection opened sucessfully. Time: {0}", elapsedTime);
+        }
     }
 }

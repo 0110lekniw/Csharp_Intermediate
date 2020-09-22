@@ -6,7 +6,8 @@ namespace _05_Method_Overriding
     {
         static void Main(string[] args)
         {
-            _03_DataConnection.Testing();
+            _04_Ex_2.Test(); 
+
         }
     }
 }
